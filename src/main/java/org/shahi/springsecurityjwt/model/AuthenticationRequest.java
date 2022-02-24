@@ -5,7 +5,6 @@ public class AuthenticationRequest {
     private String username;
     private String password;
 
-    //need this for serialization
     public AuthenticationRequest() {
     }
 
