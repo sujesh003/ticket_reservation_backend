@@ -1,4 +1,4 @@
-package org.shahi.springsecurityjwt.controller;
+package org.shahi.ticketmanagement.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package org.shahi.springsecurityjwt.util;
+package org.shahi.ticketmanagement.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

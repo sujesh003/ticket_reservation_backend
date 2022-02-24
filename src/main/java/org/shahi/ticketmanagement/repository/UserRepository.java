@@ -1,6 +1,6 @@
-package org.shahi.springsecurityjwt.repository;
+package org.shahi.ticketmanagement.repository;
 
-import org.shahi.springsecurityjwt.model.User;
+import org.shahi.ticketmanagement.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

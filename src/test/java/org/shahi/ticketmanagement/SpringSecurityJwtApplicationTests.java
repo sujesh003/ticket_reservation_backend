@@ -1,4 +1,4 @@
-package org.shahi.springsecurityjwt;
+package org.shahi.ticketmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

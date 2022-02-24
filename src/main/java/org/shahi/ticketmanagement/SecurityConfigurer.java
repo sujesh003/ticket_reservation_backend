@@ -1,7 +1,7 @@
-package org.shahi.springsecurityjwt;
+package org.shahi.ticketmanagement;
 
-import org.shahi.springsecurityjwt.filter.JwtRequestFilter;
-import org.shahi.springsecurityjwt.service.MyUserDetailsService;
+import org.shahi.ticketmanagement.filter.JwtRequestFilter;
+import org.shahi.ticketmanagement.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;

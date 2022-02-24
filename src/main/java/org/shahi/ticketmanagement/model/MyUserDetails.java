@@ -1,4 +1,4 @@
-package org.shahi.springsecurityjwt.model;
+package org.shahi.ticketmanagement.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,4 +1,4 @@
-package org.shahi.springsecurityjwt.model;
+package org.shahi.ticketmanagement.model;
 
 public class AuthenticationRequest {
 

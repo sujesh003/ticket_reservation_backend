@@ -1,7 +1,7 @@
-package org.shahi.springsecurityjwt;
+package org.shahi.ticketmanagement;
 
-import org.shahi.springsecurityjwt.repository.TicketRepository;
-import org.shahi.springsecurityjwt.repository.UserRepository;
+import org.shahi.ticketmanagement.repository.TicketRepository;
+import org.shahi.ticketmanagement.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

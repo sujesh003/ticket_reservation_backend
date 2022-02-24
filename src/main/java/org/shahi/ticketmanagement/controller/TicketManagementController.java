@@ -1,9 +1,9 @@
-package org.shahi.springsecurityjwt;
+package org.shahi.ticketmanagement.controller;
 
-import org.shahi.springsecurityjwt.model.AuthenticationRequest;
-import org.shahi.springsecurityjwt.model.AuthenticationResponse;
-import org.shahi.springsecurityjwt.service.MyUserDetailsService;
-import org.shahi.springsecurityjwt.util.JwtUtil;
+import org.shahi.ticketmanagement.model.AuthenticationRequest;
+import org.shahi.ticketmanagement.model.AuthenticationResponse;
+import org.shahi.ticketmanagement.service.MyUserDetailsService;
+import org.shahi.ticketmanagement.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

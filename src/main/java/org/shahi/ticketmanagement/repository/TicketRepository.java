@@ -1,6 +1,6 @@
-package org.shahi.springsecurityjwt.repository;
+package org.shahi.ticketmanagement.repository;
 
-import org.shahi.springsecurityjwt.model.Ticket;
+import org.shahi.ticketmanagement.model.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
