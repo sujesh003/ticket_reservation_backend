@@ -20,6 +20,9 @@ public class Ticket {
     @Column(name = "payment", updatable = false)
     private Boolean payment;
 
+    @ManyToOne
+    private User user;
+
     public int getId() {
         return id;
     }
@@ -58,5 +61,13 @@ public class Ticket {
 
     public void setPayment(Boolean payment) {
         this.payment = payment;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

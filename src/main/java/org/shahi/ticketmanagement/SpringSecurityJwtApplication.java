@@ -29,32 +29,6 @@ public class SpringSecurityJwtApplication {
 
     @PostConstruct
     public void initializeUserAndTicket() {
-        List<Ticket> tickets = new ArrayList<>();
-
-        Ticket ticket1 = new Ticket();
-        ticket1.setId(1);
-        ticket1.setDescription("Movie Ticket");
-        ticket1.setPrice(240.0);
-        ticket1.setPayment(false);
-        ticket1.setReserved(false);
-
-        Ticket ticket2 = new Ticket();
-        ticket2.setId(2);
-        ticket2.setDescription("Heli Ticket");
-        ticket2.setPrice(24000.0);
-        ticket2.setPayment(false);
-        ticket2.setReserved(false);
-
-        Ticket ticket3 = new Ticket();
-        ticket3.setId(3);
-        ticket3.setDescription("Flight Ticket");
-        ticket3.setPrice(180000.0);
-        ticket3.setPayment(false);
-        ticket3.setReserved(false);
-
-        tickets.add(ticket1);
-        tickets.add(ticket2);
-        tickets.add(ticket3);
 
         List<User> users = new ArrayList<>();
         User user1 = new User();
@@ -74,13 +48,42 @@ public class SpringSecurityJwtApplication {
         users.add(user1);
         users.add(user2);
 
-        if (ticketRepository.count() == 0) {
-            ticketRepository.saveAll(tickets);
-        }
+        List<Ticket> tickets = new ArrayList<>();
 
         if (userRepository.count() == 0) {
+
             userRepository.saveAll(users);
+            users.forEach(user -> {
+                Ticket ticket1 = new Ticket();
+                ticket1.setId(1);
+                ticket1.setDescription("Movie Ticket");
+                ticket1.setPrice(240.0);
+                ticket1.setPayment(false);
+                ticket1.setReserved(false);
+                ticket1.setUser(user);
+
+                Ticket ticket2 = new Ticket();
+                ticket2.setId(2);
+                ticket2.setDescription("Heli Ticket");
+                ticket2.setPrice(24000.0);
+                ticket2.setPayment(false);
+                ticket2.setReserved(false);
+                ticket2.setUser(user);
+
+                Ticket ticket3 = new Ticket();
+                ticket3.setId(3);
+                ticket3.setDescription("Flight Ticket");
+                ticket3.setPrice(180000.0);
+                ticket3.setPayment(false);
+                ticket3.setReserved(false);
+                ticket3.setUser(user);
+
+                tickets.add(ticket1);
+                tickets.add(ticket2);
+                tickets.add(ticket3);
+                ticketRepository.saveAll(tickets);
+
+            });
         }
     }
-
 }
