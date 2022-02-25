@@ -28,11 +28,9 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public Map<String, Integer> statusCount() {
         Map<String, Integer> status = ticketRepository.statusCount();
-
         status.entrySet().forEach(entry -> {
-            System.out.println("here goes map " + entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getKey() + " " + entry.getValue());
         });
-        System.out.println("Statusstatus" + status);
         return status;
     }
 }

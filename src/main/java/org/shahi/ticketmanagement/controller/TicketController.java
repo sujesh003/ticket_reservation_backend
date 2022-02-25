@@ -1,5 +1,6 @@
 package org.shahi.ticketmanagement.controller;
 
+import org.shahi.ticketmanagement.model.RestResponseDTO;
 import org.shahi.ticketmanagement.model.Ticket;
 import org.shahi.ticketmanagement.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,6 @@ public class TicketController {
 
     @GetMapping(value = "/statusCount")
     public ResponseEntity<?> countLoanStatus() {
-        Map<String, Integer> statusMap = ticketService.statusCount();
-        System.out.println("status map" + statusMap);
-        return null;
+        return new RestResponseDTO().successModel(ticketService.statusCount());
     }
 }
