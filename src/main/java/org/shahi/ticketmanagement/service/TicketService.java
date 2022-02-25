@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface TicketService {
 
-    List<Ticket> getAllTickets();
+    List<Ticket> getAllTickets(String username);
 
     Map<String,Integer> statusCount();
 }
