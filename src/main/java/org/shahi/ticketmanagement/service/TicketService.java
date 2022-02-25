@@ -10,4 +10,6 @@ public interface TicketService {
     List<Ticket> getAllTickets(String username);
 
     Map<String,Integer> statusCount();
+
+    Ticket saveTicketInformation(Ticket ticket);
 }

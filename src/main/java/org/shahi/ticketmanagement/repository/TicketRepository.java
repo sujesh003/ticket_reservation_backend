@@ -10,9 +10,9 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
 
     @Query(value = "SELECT "
             + "(SELECT  COUNT(payment) FROM ticket t"
-            + "  WHERE t.payment  in (0)) PAID,"
+            + "  WHERE t.payment  in (1)) PAID,"
 
             + "(SELECT  COUNT(reserved) FROM ticket t"
-            + " WHERE t.reserved IN (0)) RESERVED", nativeQuery = true)
+            + " WHERE t.reserved IN (1)) RESERVED", nativeQuery = true)
     Map<String, Integer> statusCount();
 }

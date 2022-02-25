@@ -14,10 +14,8 @@ public class Ticket {
 
     private Double price;
 
-    @Column(name = "reserved", updatable = false)
     private Boolean reserved;
 
-    @Column(name = "payment", updatable = false)
     private Boolean payment;
 
     @ManyToOne

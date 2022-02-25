@@ -9,9 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,6 +37,11 @@ public class TicketController {
         }
         List<Ticket> tickets = ticketService.getAllTickets(username);
         return tickets;
+    }
+
+    @PostMapping("/save/ticket")
+    public Ticket saveReservationandPaymentInformation(@RequestBody Ticket ticket) {
+        return ticketService.saveTicketInformation(ticket);
     }
 
     @GetMapping(value = "/statusCount")
