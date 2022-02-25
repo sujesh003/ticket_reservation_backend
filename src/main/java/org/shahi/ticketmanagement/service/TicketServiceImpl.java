@@ -18,17 +18,10 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public List<Ticket> getAllTickets(String username) {
         List<Ticket> tickets = ticketRepository.findAll();
-
         List<Ticket> selectedTickets = tickets
                 .stream()
                 .filter(t -> t.getUser().getUserName().equals(username))
                 .collect(Collectors.toList());
-        System.out.println("selected tickets" + selectedTickets);
-        selectedTickets.forEach(ticket -> {
-            System.out.println("ticket id" + ticket.getId());
-            System.out.println("ticket id" + ticket.getDescription());
-            System.out.println("ticket id" + ticket.getUser().getUserName());
-        });
         return selectedTickets;
     }
 

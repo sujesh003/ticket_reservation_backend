@@ -26,21 +26,6 @@ public class AuthenticationController {
     @Autowired
     private JwtUtil jwtTokenUtil;
 
-    @RequestMapping({"/hello"})
-    public String hello() {
-        return "<h1>Hello Worlddd</h1>";
-    }
-
-    @RequestMapping(value = "/reserve", method = RequestMethod.POST)
-    public String reserveTicket() {
-        return "<h1>Reserve Ticket</h1>";
-    }
-
-    @RequestMapping(value = "/payment", method = RequestMethod.POST)
-    public String paymentTicket() {
-        return "<h1>Pay Ticket</h1>";
-    }
-
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
